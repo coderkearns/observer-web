@@ -1,4 +1,4 @@
-<img align="right" width="200" height="200" src="https://github.com/coderkearns/template/blob/main/logo.png?raw=true" />
+<img align="right" height="200" src="https://github.com/coderkearns/observer-web/blob/main/banner.png?raw=true" />
 
 # observer-web
 
