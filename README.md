@@ -1,13 +1,8 @@
 <img align="right" width="200" height="200" src="https://github.com/coderkearns/template/blob/main/logo.png?raw=true" />
 
-# template
+# observer-web
 
-A general template for my projects, used as a base for more specific project templates
-
-## Getting Started
-
-### Installing
-
+A simple protocol idea for subscription based communication between servers without polling.
 
 ## Documentation
 
