@@ -29,9 +29,9 @@ type SubscribeResponse =
 
 Here are some examples:
 
-- `200 { "status": "SUBSCRIBED" }`
-- `400 { "error": "callback query param required" }`
-- `500 { "error": "<server_error_message>" }`
+- `200 { "subscribed": true }`
+- `400 { "subscribed": false, "error": "callback is required" }`
+- `500 { "subscribed": false, "error": "<server_error_message>" }`
 
 ## Receiving notifications via callbacks
 
@@ -54,7 +54,7 @@ This specification also defines some [pre-specified body schemas](#notify-pre-sp
 
 ### Response
 
-Observers should send a simple JSON responses to indicate how a notification was received. The subject is not obligated to care about or resend a `NOTIFY` based on the response, but the information may be helpful.
+Observers should send a simple JSON responses to indicate how a notification was received. The subject is not obligated to care about or resend a `NOTIFY` based on the response, but the information may be helpful. For example, a `404 "callback not found"` might indicate to the subject that it should remove that callback from it's internal list as it no longer exists.
 
 The response schema is:
 
@@ -68,7 +68,6 @@ type NotifyResponse = {
 Here are some examples:
 
 - `200 { "received": true }`
-- `400 { "received": false, "error": "bad json body" }`
 - `404 { "received": false, "error": "callback not found" }`
 - `500 { "received": false, "error": "<server_error_message>" }`
 
