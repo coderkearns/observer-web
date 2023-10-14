@@ -6,7 +6,9 @@ A simple protocol idea for subscription based communication between servers with
 
 ## Documentation
 
-See [DOCS.md](./DOCS.md) for documentation and examples.
+See [protocol.md](./src/protocol.md) for the protocol itself.
+
+See [DOCS.md](./DOCS.md) for documentation and examples based around the javascript implementation in this repo.
 
 ## Contributing
 
